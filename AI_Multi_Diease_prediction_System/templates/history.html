@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#dbeafe;
+        }
+
+        table{
+            width:80%;
+            margin:auto;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid black;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#0b5ed7;
+            color:white;
+        }
+
+        h2{
+            text-align:center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h2>Prediction History</h2>
+
+<table>
+
+<tr>
+<th>Disease</th>
+<th>Prediction</th>
+<th>Date</th>
+</tr>
+
+{% for row in records %}
+
+<tr>
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

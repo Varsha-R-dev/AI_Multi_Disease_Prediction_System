@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parkinson's Disease Prediction</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background:linear-gradient(135deg,#72209f,#b1b8d8,#a753c5);
+        }
+
+        .container{
+            width:1000px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#0b5ed7;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:8px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0b5ed7;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:18px;
+        }
+
+        h3{
+            text-align:center;
+            color:green;
+        }
+
+        a{
+
+            text-decoration:none;
+
+        }
+
+        .back{
+
+            display:block;
+            margin-top:20px;
+            text-align:center;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Parkinsons Disease Prediction</h2>
+
+<form method="POST">
+
+<input type="number" step="any" name="fo" placeholder="MDVP:Fo(Hz)" required>
+
+<input type="number" step="any" name="fhi" placeholder="MDVP:Fhi(Hz)" required>
+
+<input type="number" step="any" name="flo" placeholder="MDVP:Flo(Hz)" required>
+
+<input type="number" step="any" name="jitter" placeholder="MDVP:Jitter(%)" required>
+
+<input type="number" step="any" name="jitter_abs" placeholder="MDVP:Jitter(Abs)" required>
+
+<input type="number" step="any" name="rap" placeholder="MDVP:RAP" required>
+
+<input type="number" step="any" name="ppq" placeholder="MDVP:PPQ" required>
+
+<input type="number" step="any" name="ddp" placeholder="Jitter:DDP" required>
+
+<input type="number" step="any" name="shimmer" placeholder="MDVP:Shimmer" required>
+
+<input type="number" step="any" name="shimmer_db" placeholder="MDVP:Shimmer(dB)" required>
+
+<input type="number" step="any" name="apq3" placeholder="Shimmer:APQ3" required>
+
+<input type="number" step="any" name="apq5" placeholder="Shimmer:APQ5" required>
+
+<input type="number" step="any" name="apq" placeholder="MDVP:APQ" required>
+
+<input type="number" step="any" name="dda" placeholder="Shimmer:DDA" required>
+
+<input type="number" step="any" name="nhr" placeholder="NHR" required>
+
+<input type="number" step="any" name="hnr" placeholder="HNR" required>
+
+<input type="number" step="any" name="rpde" placeholder="RPDE" required>
+
+<input type="number" step="any" name="dfa" placeholder="DFA" required>
+
+<input type="number" step="any" name="spread1" placeholder="Spread1" required>
+
+<input type="number" step="any" name="spread2" placeholder="Spread2" required>
+
+<input type="number" step="any" name="d2" placeholder="D2" required>
+
+<input type="number" step="any" name="ppe" placeholder="PPE" required>
+
+<button type="submit">Predict Parkinson's Disease</button>
+
+</form>
+
+{% if prediction %}
+<h3>{{ prediction }}</h3>
+{% endif %}
+
+<div class="back">
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

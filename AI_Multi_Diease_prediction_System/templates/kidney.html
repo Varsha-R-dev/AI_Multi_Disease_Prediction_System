@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kidney Disease Prediction</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:linear-gradient(135deg,#72209f,#b1b8d8,#a753c5);
+        }
+
+        .container{
+            width:900px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#0b5ed7;
+        }
+
+        table{
+            width:100%;
+        }
+
+        td{
+            padding:8px;
+        }
+
+        input{
+            width:100%;
+            padding:8px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#0b5ed7;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:18px;
+        }
+
+        h3{
+            text-align:center;
+            color:green;
+        }
+
+        a{
+
+            text-decoration:none;
+
+        }
+
+        .back{
+
+            display:block;
+            margin-top:20px;
+            text-align:center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Kidney Disease Prediction</h2>
+
+<form method="POST">
+
+<input type="number" step="any" name="id" placeholder="ID" required><br><br>
+
+<input type="number" step="any" name="age" placeholder="Age" required><br><br>
+
+<input type="number" step="any" name="bp" placeholder="blood pressure" required><br><br>   
+
+<input type="number" step="any" name="sg" placeholder="Specific Gravity" required><br><br>
+
+<input type="number" step="any" name="al" placeholder="Albumin" required><br><br>
+
+<input type="number" step="any" name="su" placeholder="Sugar" required><br><br>
+
+<input type="number" step="any" name="rbc" placeholder="Red Blood Cells (0=Normal,1=Abnormal)" required><br><br>
+
+<input type="number" step="any" name="pc" placeholder="Pus Cell (0=Normal,1=Abnormal)" required><br><br>
+
+<input type="number" step="any" name="pcc" placeholder="Pus Cell Clumps (0=No,1=Yes)" required><br><br>
+
+<input type="number" step="any" name="ba" placeholder="Bacteria (0=No,1=Yes)" required><br><br>
+
+<input type="number" step="any" name="bgr" placeholder="Blood Glucose Random" required><br><br>
+
+<input type="number" step="any" name="bu" placeholder="Blood Urea" required><br><br>
+
+<input type="number" step="any" name="sc" placeholder="Serum Creatinine" required><br><br>
+
+<input type="number" step="any" name="sod" placeholder="Sodium" required><br><br>
+
+<input type="number" step="any" name="pot" placeholder="Potassium" required><br><br>
+
+<input type="number" step="any" name="hemo" placeholder="Hemoglobin" required><br><br>
+
+<input type="number" step="any" name="pcv" placeholder="Packed Cell Volume" required><br><br>
+
+<input type="number" step="any" name="wc" placeholder="White Blood Cell Count" required><br><br>
+
+<input type="number" step="any" name="rc" placeholder="Red Blood Cell Count" required><br><br>
+
+<input type="number" step="any" name="htn" placeholder="Hypertension (0/1)" required><br><br>
+
+<input type="number" step="any" name="dm" placeholder="Diabetes Mellitus (0/1)" required><br><br>
+
+<input type="number" step="any" name="cad" placeholder="Coronary Artery Disease (0/1)" required><br><br>
+
+<input type="number" step="any" name="appet" placeholder="Appetite (1=Good,0=Poor)" required><br><br>
+
+<input type="number" step="any" name="pe" placeholder="Pedal Edema (0/1)" required><br><br>
+
+<input type="number" step="any" name="ane" placeholder="Anemia (0/1)" required><br><br>
+
+<button type="submit">Predict Kidney Disease</button>
+
+</form>
+
+{% if prediction %}
+<h3>{{ prediction }}</h3>
+{% endif %}
+
+<div class="back">
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
